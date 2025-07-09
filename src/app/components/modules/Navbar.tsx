@@ -1,10 +1,36 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="flex justify-between p-5">
-      <div>
-        <Image src={"/logo.png"} width={139} height={40} alt="logo" />
+    <header
+      className={`flex justify-between p-5 items-center sticky top-0 z-50 px-[260px] ${
+        isScrolled ? "shadow1 bg-[#212428]" : ""
+      }`}
+    >
+      <div className="flex items-center">
+        <Image
+          src="/Professional_picture-removebg.png"
+          alt="Professional Portrait"
+          className="w-full h-full object-scale-down rounded-full"
+          width={60}
+          height={60}
+        />
+        <span className="text-[#c4cfde] font-bold">SOBUZ</span>
       </div>
       <div>
         <nav className="flex justify-center space-x-10 uppercase text-[13px]  font-semibold tracking-wide text-[#c4cfde]">
