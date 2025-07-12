@@ -27,6 +27,7 @@ body {
 .primary-color {
   color: #ff014f;
 }
+
 .shadow1 {
   box-shadow: var(--shadow-1);
 }
@@ -36,4 +37,7 @@ body {
   transition-timing-function: ease;
   transition-delay: 0s;
   transition-property: all;
+}
+.card-hover-gradient:hover {
+  background: linear-gradient(to right bottom, #212428, #16181c);
 }

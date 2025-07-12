@@ -18,19 +18,19 @@ const Navbar = () => {
   }, []);
   return (
     <header
-      className={`flex justify-between p-5 items-center sticky top-0 z-50 px-[260px] ${
+      className={`flex justify-between p-4 items-center sticky top-0 z-50 px-[260px] ${
         isScrolled ? "shadow1 bg-[#212428]" : ""
       }`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center gap-2">
         <Image
           src="/Professional_picture-removebg.png"
           alt="Professional Portrait"
-          className="w-full h-full object-scale-down rounded-full"
+          className="w-full h-full object-scale-down rounded-full border-4 border-[#2C2F35]"
           width={60}
           height={60}
         />
-        <span className="text-[#c4cfde] font-bold">SOBUZ</span>
+        <span className="text-[#c4cfde] font-bold text-[17px]">SOBUZ</span>
       </div>
       <div>
         <nav className="flex justify-center space-x-10 uppercase text-[13px]  font-semibold tracking-wide text-[#c4cfde]">

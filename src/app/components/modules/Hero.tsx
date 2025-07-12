@@ -69,8 +69,8 @@ const Hero = () => {
                 src="/Professional_picture-removebg.png"
                 alt="Professional Portrait"
                 className="w-full h-full object-cover object-center"
-                width={400}
-                height={400}
+                width={500}
+                height={500}
               />
 
               {/* Overlay gradient for better text readability on floating elements */}
